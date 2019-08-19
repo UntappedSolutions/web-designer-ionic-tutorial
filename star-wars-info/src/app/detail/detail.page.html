@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">
+      Person details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="detailData$ | async as detailData" class="content-container">
+  <ion-img src="{{detailData.image}}" alt="{{detailData.name}}" center></ion-img>
+  <h1>{{detailData.name}}</h1>
+  <p>Height: {{detailData.height}}</p>
+  <p>Mass: {{detailData.mass}}</p>
+  <p>Hair Colour: {{detailData.hair_color}}</p>
+  <p>Eye Colour: {{detailData.eye_color}}</p>
+  <p>Year of birth: {{detailData.birth_year}}</p>
+  <p>Gender: {{detailData.gender}}</p>
+</ion-content>

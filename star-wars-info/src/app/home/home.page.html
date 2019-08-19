@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title color="primary">
+      People in Star Wars
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item
+            *ngFor="let person of people$ | async"
+            no-padding
+            [routerLink]="'/detail/' + person.id"
+            routerDirection="forward">
+      <ion-label>{{person.name}}</ion-label>
+      <ion-icon name="planet" slot="end" color="tertiary"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

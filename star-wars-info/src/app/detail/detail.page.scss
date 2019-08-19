@@ -1,0 +1,14 @@
+.content-container{
+  --padding-bottom: 20px;
+  --padding-top: 20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+
+  h1 {
+    text-align: center;
+  }
+  ion-img{
+    max-width:250px;
+    margin:auto;
+  }
+}
